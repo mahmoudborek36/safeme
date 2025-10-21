@@ -10,6 +10,28 @@ dependencies:
   flutter:
     sdk: flutter
 
+    # state managment 
+  flutter_bloc: ^9.1.1
+ # code generator
+  freezed: ^3.2.3
+  freezed_annotation: ^3.1.0
+ # Simple direct Service Locator that allows to decouple the interface from a concrete implementation and to access the concrete implementation from everywhere in your App"
+  get_it: ^8.2.0
+ # Classes and helper functions that support JSON code generation via the `json_serializable` package.
+  json_annotation: ^4.9.0
+  json_serializable: ^6.11.1
+  # networking
+  dio: ^5.9.0
+  pretty_dio_logger: ^1.4.0
+  retrofit: ^4.7.3
+  retrofit_generator: ^10.0.6
+  #Contains code to deal with internationalized/localized messages, date and number formatting and parsing, bi-directional text, and other internationalization issues.
+  intl: ^0.20.2
+  # Easy and Fast internationalizing and localization your Flutter Apps, this package simplify the internationalizing process
+  easy_localization: ^3.0.8
+ # Customize Flutter's default white native splash screen with background color and splash image. Supports dark mode, full screen, and more.
+  flutter_native_splash: ^2.4.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
