@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:safeme/core/constans/assets_manager.dart';
 import 'package:safeme/core/theming/styles.dart';
@@ -9,7 +10,7 @@ class LogoAndDocAndText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 8.0, left: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0).w,
       child: Stack(
         children: [
           SvgPicture.asset(AssetsManager.bigLogo),
@@ -25,12 +26,10 @@ class LogoAndDocAndText extends StatelessWidget {
             child: Image.asset(AssetsManager.onbordingDoc),
           ),
           Positioned(
-            
             bottom: 30,
             right: 0,
             left: 0,
             child: Text(
-              
               "Best Doctor Appointment App",
               textAlign: TextAlign.center,
               style: TextStyles.font32BlueBold.copyWith(height: 1.3),
