@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:safeme/core/rounting/routes.dart';
 import 'package:safeme/features/login/ui/login_screen.dart';
 import 'package:safeme/features/onboarding/onboarding_screen.dart';
+import 'package:safeme/features/onboarding/splash_screen.dart';
 
 class AppRouting {
   Route generateRoute(RouteSettings settings) {
@@ -11,6 +12,8 @@ class AppRouting {
         return MaterialPageRoute(builder: (_) => OnboardingScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => LoginScreen());
+      case Routes.splashScreen:
+        return MaterialPageRoute(builder: (_) => SplashScreen());
       default:
         return MaterialPageRoute(builder: (_) => Placeholder());
     }

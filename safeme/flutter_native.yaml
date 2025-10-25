@@ -1,0 +1,21 @@
+name: safeme
+description: A new Flutter project.
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/splash.png
+  android: true
+  ios: true
+  fullscreen: true
+
+  android_12:
+    color: "#ffffff"
+    image: assets/images/splash.png
+
+flutter:
+  assets:
+    - assets/images/splash.png

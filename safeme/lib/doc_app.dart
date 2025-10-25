@@ -4,26 +4,30 @@ import 'package:safeme/core/rounting/app_routing.dart';
 import 'package:safeme/core/rounting/routes.dart';
 import 'package:safeme/core/theming/colors.dart';
 
-class DocApp extends StatelessWidget {
-    final AppRouting routing;
+class DocApp extends StatefulWidget {
+  final AppRouting routing;
 
   const DocApp({super.key, required this.routing});
 
   @override
+  State<DocApp> createState() => _DocAppState();
+}
+
+class _DocAppState extends State<DocApp> {
+  @override
   Widget build(BuildContext context) {
-    return  ScreenUtilInit(
-      designSize: Size(375, 812),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        title: "",
+        title: "SafeMe",
         theme: ThemeData(
-          primaryColor:ColorsManager.mainBlueColcor ,
-          scaffoldBackgroundColor: Colors.white
-
+          primaryColor: ColorsManager.mainBlueColcor,
+          scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.onBoardingScreen,
-        onGenerateRoute: routing.generateRoute,
+        initialRoute: Routes.splashScreen,
+        onGenerateRoute: widget.routing.generateRoute,
       ),
     );
   }
