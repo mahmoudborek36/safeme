@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:safeme/core/rounting/routes.dart';
-import 'package:safeme/features/login/ui/login_screen.dart';
-import 'package:safeme/features/onboarding/onboarding_screen.dart';
-import 'package:safeme/features/onboarding/splash_screen.dart';
+import 'package:safeme/features/login/ui/loginscreen/login_screen.dart';
+import 'package:safeme/features/login/ui/onboarding/onboarding_screen.dart';
+import 'package:safeme/features/login/ui/onboarding/splash_screen.dart';
 
 class AppRouting {
   Route generateRoute(RouteSettings settings) {
