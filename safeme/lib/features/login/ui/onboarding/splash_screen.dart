@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: [
                       SvgPicture.asset(AssetsManager.docDocLogo, width: 70),
 
-                      Text("DocDoc", style: TextStyles.font24Black700Weight),
+                      Text("DocDoc", style: TextStyles.font24BlackBold),
                     ],
                   ),
                 ),
