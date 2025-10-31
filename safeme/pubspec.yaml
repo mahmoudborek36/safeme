@@ -9,6 +9,7 @@ environment:
 dependencies:
   dio: ^5.9.0
   easy_localization: ^3.0.8
+  build_runner: ^2.10.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
@@ -22,6 +23,9 @@ dependencies:
   pretty_dio_logger: ^1.4.0
   retrofit: ^4.7.3
   retrofit_generator: ^10.0.6
+  flutter_secure_storage: ^9.2.4
+  
+  shared_preferences: ^2.5.3
 # Customize Flutter's default white native splash screen with background color and splash image. Supports dark mode, full screen, and more.
 
 
