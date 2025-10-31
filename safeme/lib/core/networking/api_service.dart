@@ -3,6 +3,8 @@ import 'package:retrofit/retrofit.dart';
 import 'package:safeme/core/networking/api_constants.dart';
 import 'package:safeme/features/login/ui/loginscreen/data/models/login_request_body.dart';
 import 'package:safeme/features/login/ui/loginscreen/data/models/login_response.dart';
+import 'package:safeme/features/signup/data/repo/signup_request_body.dart';
+import 'package:safeme/features/signup/data/repo/signup_response.dart';
 
 
 part 'api_service.g.dart';
@@ -16,8 +18,8 @@ abstract class ApiService {
     @Body() LoginRequestBody loginRequestBody,
   );
 
-  // @POST(ApiConstants.signup)
-  // Future<SignupResponse> signup(
-  //   @Body() SignupRequestBody signupRequestBody,
-  // );
+  @POST(ApiConstants.signup)
+  Future<SignupResponse> signup(
+    @Body() SignupRequestBody signupRequestBody,
+  );
 }
