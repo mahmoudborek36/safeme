@@ -7,6 +7,8 @@ import 'package:safeme/features/login/ui/loginscreen/cubit/login_cubit.dart';
 import 'package:safeme/features/login/ui/loginscreen/login_screen.dart';
 import 'package:safeme/features/login/ui/onboarding/onboarding_screen.dart';
 import 'package:safeme/features/login/ui/onboarding/splash_screen.dart';
+import 'package:safeme/features/signup/logic/signup_cubit.dart';
+import 'package:safeme/features/signup/ui/signyp_screen.dart';
 
 class AppRouting {
   Route generateRoute(RouteSettings settings) {
@@ -14,6 +16,10 @@ class AppRouting {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (_) => OnboardingScreen());
+      case Routes.signUpScreen:
+        return MaterialPageRoute(builder: (_) => BlocProvider(
+          create: (context) => getIt<SignupCubit>() ,
+          child: SignypScreen()));
       case Routes.loginScreen:
         return  MaterialPageRoute(
           builder: (_) => BlocProvider(

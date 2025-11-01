@@ -10,7 +10,7 @@ class SignupRequestBody {
   final String password;
   @JsonKey(name: "password_confirmation")
   final String passwordConfirmation;
-  final String gender;
+  final int gender;
 
   SignupRequestBody({
     required this.email,
