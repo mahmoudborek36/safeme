@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:safeme/core/app_text_button.dart';
 import 'package:safeme/core/theming/spacing.dart';
 import 'package:safeme/core/theming/styles.dart';
-import 'package:safeme/features/login/ui/loginscreen/wedgits/login_block_listener.dart';
 import 'package:safeme/features/login/ui/loginscreen/wedgits/terms_and_conditions.dart';
+import 'package:safeme/features/signup/logic/signup_cubit.dart';
 import 'package:safeme/features/signup/ui/wedgets/already_have_an_account_yet.dart';
-import 'package:safeme/features/signup/ui/wedgets/signup_email_and_password_and_num.dart';
+import 'package:safeme/features/signup/ui/wedgets/signup_bloc_listener.dart';
+import 'package:safeme/features/signup/ui/wedgets/signup_form.dart';
 
 class SignypScreen extends StatefulWidget {
   const SignypScreen({super.key});
@@ -38,7 +40,7 @@ class _SignypScreenState extends State<SignypScreen> {
                 Column(
                   children: [
 
-                    SignupEmailAndPasswordAndNum(),
+                    SignupForm(),
                      
                     
                     verticalSpace(30),
@@ -48,14 +50,15 @@ class _SignypScreenState extends State<SignypScreen> {
                         fontSize: 11.sp,
                       ),
                       onPressed: () {
-                        // validateAndDoLogin(context);
+                        validateAndDoLogin(context);
                       },
                     ),
                     verticalSpace(40),
                     TermsAndConditionsText(),
                     verticalSpace(30),
                     AlreadyHaveAnAccountYet(),
-                    LoginBlockListener(),
+                      SignupBlocListener(),
+                  
                   ],
                 ),
               ],
@@ -67,9 +70,9 @@ class _SignypScreenState extends State<SignypScreen> {
   }
 }
 
-  // void validateAndDoLogin(BuildContext context) {
-  //   if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-  //     context.read<LoginCubit>().emitLoginStates();
-  //   }
-  // }
+  void validateAndDoLogin(BuildContext context) {
+    if (context.read<SignupCubit>().formKey.currentState!.validate()) {
+      context.read<SignupCubit>().emitSignUpState();
+    }
+  }
 
