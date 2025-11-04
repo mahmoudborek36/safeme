@@ -17,7 +17,7 @@ class AppTextFormFeild extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String?) validator;
   const AppTextFormFeild({
-    Key? key,
+    super.key,
     this.contentPadding,
     this.foucuseBorder,
     this.enableBorder,
@@ -28,7 +28,7 @@ class AppTextFormFeild extends StatelessWidget {
     this.suffixIcon,
      this.controller,
     required this.validator,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
