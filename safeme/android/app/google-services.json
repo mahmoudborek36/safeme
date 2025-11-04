@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "680306899855",
+    "project_id": "flutter-app-distribution-319aa",
+    "storage_bucket": "flutter-app-distribution-319aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680306899855:android:1ffb1f7572e2679bcfa9fa",
+        "android_client_info": {
+          "package_name": "com.example.safeme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAvw6z8IBeieqQrjfoxSLIEsQtCTimSC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
