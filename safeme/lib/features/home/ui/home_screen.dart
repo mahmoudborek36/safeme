@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safeme/core/theming/colors.dart';
+import 'package:safeme/core/theming/spacing.dart';
+import 'package:safeme/features/home/widgets/doctor_blue_container.dart';
 import 'package:safeme/features/home/widgets/home_top_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           margin: EdgeInsets.fromLTRB(20, 16, 20, 28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [HomeTopBar()],
+            children: [HomeTopBar(), verticalSpace(2), DoctorBlueContainer()],
           ),
         ),
       ),
