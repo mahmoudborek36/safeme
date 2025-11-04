@@ -1,7 +1,6 @@
 import 'package:safeme/core/networking/api_error_handler.dart';
 import 'package:safeme/core/networking/api_result.dart';
 import 'package:safeme/core/networking/api_service.dart';
-import 'package:safeme/features/login/ui/loginscreen/data/models/login_response.dart';
 import 'package:safeme/features/signup/data/repo/signup_request_body.dart';
 import 'package:safeme/features/signup/data/repo/signup_response.dart';
 

@@ -26,7 +26,7 @@ class _DocAppState extends State<DocApp> {
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.splashScreen,
+        initialRoute: Routes.homeScreen,
         onGenerateRoute: widget.routing.generateRoute,
       ),
     );

@@ -47,6 +47,7 @@ class _EmailPasswordState extends State<EmailPassword> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Form(
       key: context.read<LoginCubit>().formKey,
