@@ -1,5 +1,8 @@
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
@@ -21,7 +24,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.safeme"
-        minSdk = flutter.minSdkVersion
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -34,12 +37,12 @@ android {
         create("development") {
             dimension = "default"
             resValue("string", "app_name", "DocDoc development")
-            applicationIdSuffix = ".dev"
+            applicationIdSuffix = ""
         }
         create("production") {
             dimension = "default"
             resValue("string", "app_name", "DocDoc production")
-            applicationIdSuffix = ".production"
+            applicationIdSuffix = ""
         }
     }
 
