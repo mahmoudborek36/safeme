@@ -1,34 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:safeme/core/theming/spacing.dart';
-import 'package:safeme/core/theming/styles.dart';
 
-class DoctorBlueContainer extends StatelessWidget {
-  const DoctorBlueContainer({super.key});
+import '../../../../core/theming/styles.dart';
+
+class DoctorsBlueContainer extends StatelessWidget {
+  const DoctorsBlueContainer({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 230.h,
+      height: 195.h,
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
           Container(
             width: double.infinity,
-            height: 190.h,
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+            height: 165.h,
+            padding: EdgeInsets.symmetric(
+              horizontal: 16.w,
+              vertical: 16.h,
+            ),
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/Background (1).png"),
+              borderRadius: BorderRadius.circular(24.0),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/home_blue_pattern.png'),
                 fit: BoxFit.cover,
               ),
-              borderRadius: BorderRadiusGeometry.circular(24.0),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Book and\nschedule with\nnearest doctor",
+                  'Book and\nschedule with\nnearest doctor',
                   style: TextStyles.font18WhiteMedium,
                   textAlign: TextAlign.start,
                 ),
@@ -39,11 +44,11 @@ class DoctorBlueContainer extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(48),
+                        borderRadius: BorderRadius.circular(48.0),
                       ),
                     ),
                     child: Text(
-                      "find doctor",
+                      'Find Nearby',
                       style: TextStyles.font12BlueRegular,
                     ),
                   ),
@@ -52,9 +57,12 @@ class DoctorBlueContainer extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 16,
+            right: 8.w,
             top: 0,
-            child: Image.asset("assets/images/home_doctore_image.png"),
+            child: Image.asset(
+              'assets/images/omar.png',
+              height: 200.h,
+            ),
           ),
         ],
       ),

@@ -1,12 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:safeme/core/theming/colors.dart';
 import 'package:safeme/core/theming/spacing.dart';
+import 'package:safeme/core/theming/styles.dart';
 import 'package:safeme/features/home/data/models/specializations_response_model.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../../core/theming/colors.dart';
-import '../../../../../core/theming/styles.dart';
+
+
 
 class DoctorsListViewItem extends StatelessWidget {
   final Doctors? doctorsModel;

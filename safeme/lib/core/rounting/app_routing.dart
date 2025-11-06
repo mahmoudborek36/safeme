@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:safeme/core/di/dependency_injection.dart';
 import 'package:safeme/core/rounting/routes.dart';
+import 'package:safeme/features/home/logic/home_cubit.dart';
 import 'package:safeme/features/home/ui/home_screen.dart';
 import 'package:safeme/features/login/ui/loginscreen/cubit/login_cubit.dart';
 import 'package:safeme/features/login/ui/loginscreen/login_screen.dart';
@@ -30,7 +31,9 @@ class AppRouting {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => SplashScreen());
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => BlocProvider(
+          create: (context) => HomeCubit(getIt()),
+          child: HomeScreen()));
       default:
         return MaterialPageRoute(builder: (_) => Placeholder());
     }
